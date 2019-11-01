@@ -6,7 +6,11 @@ import PlayerCard from './components/PlayerCard';
 class App extends React.Component {
 
   state = {
-    players: [],
+    players: [{
+      name: '',
+      country: '',
+
+    }],
   };
 
 
@@ -22,20 +26,26 @@ class App extends React.Component {
       .catch(err => console.log(err));
   }
 
-  componentDidUpdate() {
-    console.log('is it workin');
-    // this.setState({ players: [] });
+  componentWillUnmount() {
+    console.log('is it workin no infi loop?')
+    axios
+      .get('http://localhost:5000/api/players')
+      .then(res => {
+        this.setState({
+          players: []
+        });
+      })
+      .catch(err => console.log(err));
   }
 
   render() {
     return (
       <div className="App" >
-        <header className="App-header">
-          <div className="followers">
 
-            <PlayerCard players={this.state.players}></PlayerCard>
-          </div>
-        </header>
+        <div >
+          <PlayerCard players={this.state.players}></PlayerCard>
+        </div>
+
       </div>
     );
   }

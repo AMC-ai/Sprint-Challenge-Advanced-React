@@ -3,11 +3,15 @@ import React from 'react';
 const PlayerCard = props => {
     return (
         <div className="card">
-            <div className="card-info">
-                <h3 className="name">{props.player.name}</h3>
-                <p>{props.player.country}</p>
-                <p>{props.player.searches}</p>
-            </div>
+            {props.players.map(players => (
+
+                <div key={players.id} className="player">
+
+                    <h3>{players.name}</h3>
+                    <p>{props.players.country}</p>
+                    <p>{props.players.searches}</p>
+                </div>
+            ))}
         </div>
     );
 }
