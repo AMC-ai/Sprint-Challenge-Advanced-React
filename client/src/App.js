@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import './App.css';
 import PlayerCard from './components/PlayerCard';
-import Switch from './components/Switch';
+import DarkSwitch from './components/DarkSwitch';
 
 class App extends React.Component {
 
@@ -40,7 +40,7 @@ class App extends React.Component {
       <div className="App" >
 
         <div >
-          <Switch />
+          <DarkSwitch />
           <PlayerCard players={this.state.players}></PlayerCard>
         </div>
 
