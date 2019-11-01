@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import './App.css';
 import PlayerCard from './components/PlayerCard';
+import Switch from './components/Switch';
 
 class App extends React.Component {
 
@@ -39,6 +40,7 @@ class App extends React.Component {
       <div className="App" >
 
         <div >
+          <Switch />
           <PlayerCard players={this.state.players}></PlayerCard>
         </div>
 
