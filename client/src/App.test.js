@@ -8,14 +8,16 @@ test('renders', () => {
   render(<App />);
 });
 
-// it('renders without crashing', () => {
-//   const div = document.createElement('div');
-//   ReactDOM.render(<App />, div);
-//   ReactDOM.unmountComponentAtNode(div);
-// });
 
-test('button id', () => {
+test('player-card is displaying', () => {
+  const { getByTestId } = render(<App />)
+  getByTestId(`player-card`)
+})
+
+
+test('toggle id', () => {
   const { getByTestId } = render(<App />)
   getByTestId(`on-switch`)
-
 })
+
+

@@ -15,7 +15,7 @@ class App extends React.Component {
     axios
       .get('http://localhost:5000/api/players')
       .then(res => {
-        console.log('players info', res.data)
+        // console.log('players info', res.data)
         this.setState({
           players: res.data
         });
@@ -27,9 +27,9 @@ class App extends React.Component {
     console.log('is it workin no infi loop?')
     axios
       .get('http://localhost:5000/api/players')
-      .then(res => {
+      .then(async (res) => {
         this.setState({
-          players: []
+          players: res.data
         });
       })
       .catch(err => console.log(err));

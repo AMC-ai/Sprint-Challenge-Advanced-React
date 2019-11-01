@@ -18,6 +18,7 @@ const DarkSwitch = () => {
                 <div
                     onClick={toggleMode}
                     className={darkMode ? 'toggle' : 'toggle toggled'}
+                    data-testid="on-switch"
                 />
             </div>
         </div>
