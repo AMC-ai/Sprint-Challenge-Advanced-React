@@ -1,5 +1,5 @@
 import { useDarkMode } from './hooks/useDarkMode';
-import React, { useState } from 'react';
+import React from 'react';
 
 const DarkSwitch = () => {
     const [darkMode, setDarkMode] =

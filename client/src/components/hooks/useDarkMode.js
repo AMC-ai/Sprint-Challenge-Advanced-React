@@ -8,8 +8,6 @@ export const useDarkMode = (key, initialValues) => {
 
     useEffect(() => {
         const body = document.querySelector('body');
-
-        // body.classList.toggle('darkMode');
         if (darkMode === true) {
             body.classList.add('dark-mode');
         } else {
@@ -17,6 +15,6 @@ export const useDarkMode = (key, initialValues) => {
         }
 
     });
-    console.log(darkMode)
+
     return [darkMode, setDarkMode];
 }
