@@ -8,8 +8,8 @@ const PlayerCard = props => {
                 <div key={players.id} className="player">
 
                     <h3>{players.name}</h3>
-                    <p>{props.players.country}</p>
-                    <p>{props.players.searches}</p>
+                    <p>{players.country}</p>
+                    <p>{players.searches}</p>
                 </div>
             ))}
         </div>

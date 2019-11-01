@@ -6,11 +6,7 @@ import PlayerCard from './components/PlayerCard';
 class App extends React.Component {
 
   state = {
-    players: [{
-      name: '',
-      country: '',
-
-    }],
+    players: [],
   };
 
 
