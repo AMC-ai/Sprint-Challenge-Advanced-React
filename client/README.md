@@ -1,3 +1,22 @@
+#Why would you use class component over function components (removing hooks from the question)?
+
+I feel function components are more dynamic in use, and cleaner in appearance
+ 
+#Name three lifecycle methods and their purposes.
+
+Mounting = component is being built
+Updating = checking state through props to see if any changes are applicable
+UnMounting = prior actions have been completed and is finished and executes lifecycle. 
+ 
+#What is the purpose of a custom hook?
+
+Allow for dynamic function and building of an app to be called multiple times for multiple uses.  
+
+#Why is it important to test our apps?
+
+This adds cushion to further aid in the apps function to make sure functions are doing exactly as expected to verify product, ie. trust but verify. 
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
